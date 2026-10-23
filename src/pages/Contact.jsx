@@ -9,7 +9,7 @@ const socialLinks = [
     name: "TikTok",
     symbol: "♪",
     description: "Outfit videos, new looks and fashion vibes.",
-    joke: "Warning: unaweza view video moja ujipate ume-scroll for 30 minutes, juu stock ni moto moto 😂",
+    joke: "Warning: unaweza view video moja ujipate ume-scroll for 30 minutes, juu stock ni moto moto 🔥😂",
     url: "https://www.tiktok.com/@ladyckcollections?_r=1&_t=ZS-9AeWueKuB9x",
     className: "contact-tiktok",
     action: "Watch our looks ↗",
@@ -124,7 +124,8 @@ export default function Contact() {
           <p>
             Unataka kuona more items before deciding? 👀
             Visit our socials for more styles, outfit inspiration,
-            new arrivals and future updates. Alafu usisahau kupiga like, kushare na kucomment kuhusu item imekubamba.
+            new arrivals and future updates. Alafu usisahau kupiga like, kushare na kucomment kuhusu item imekubamba 😂🔥.
+
           </p>
         </div>
 

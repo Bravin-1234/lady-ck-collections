@@ -1,4 +1,3 @@
-
 :root {
   --lc-black: #080706;
   --lc-surface: #11100e;
@@ -24,7 +23,8 @@
   box-sizing: border-box;
 }
 
-.collection-page img {
+.collection-page img,
+.collection-page video {
   display: block;
   max-width: 100%;
 }
@@ -331,7 +331,7 @@
   background: rgba(234, 196, 79, 0.06);
 }
 
-/* Shop the Vibe */
+/* Shared section spacing */
 
 .vibe-section,
 .lookbook-section,
@@ -339,6 +339,8 @@
 .social-showcase-section {
   padding: 90px max(5%, calc((100vw - 1280px) / 2));
 }
+
+/* Shop the Vibe */
 
 .vibe-grid {
   display: grid;
@@ -491,6 +493,132 @@
 
 .fresh-drops-gallery img:first-child {
   grid-row: span 2;
+}
+
+/* =====================================================
+   BOUTIQUE VIDEOS — BEHIND THE DRIP 🎬
+   ===================================================== */
+
+.boutique-videos-section {
+  position: relative;
+  padding: 90px max(5%, calc((100vw - 1280px) / 2));
+  overflow: hidden;
+  border-top: 1px solid var(--lc-border);
+  border-bottom: 1px solid var(--lc-border);
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(234, 196, 79, 0.1),
+      transparent 55%
+    ),
+    #0c0b09;
+}
+
+.boutique-videos-heading {
+  max-width: 740px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.boutique-videos-heading h2 {
+  margin: 0;
+  color: var(--lc-white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.12;
+}
+
+.boutique-videos-heading h2 span {
+  color: var(--lc-gold);
+  font-style: italic;
+}
+
+.boutique-videos-heading p {
+  max-width: 600px;
+  margin: 15px auto 0;
+  color: var(--lc-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.boutique-videos-heading .video-humour-note {
+  margin-top: 10px;
+  color: var(--lc-gold-light);
+  font-size: 0.84rem;
+}
+
+.boutique-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.boutique-video-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--lc-border);
+  border-radius: 4px;
+  background: var(--lc-surface);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.boutique-video-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(234, 196, 79, 0.65);
+}
+
+.boutique-video-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  background: #050504;
+}
+
+.boutique-video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #050504;
+}
+
+.boutique-video-info {
+  padding: 17px 16px 19px;
+}
+
+.boutique-video-number {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--lc-gold);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.boutique-video-info h3 {
+  margin: 0;
+  color: var(--lc-white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.boutique-video-info p {
+  margin: 8px 0 0;
+  color: var(--lc-muted);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.boutique-video-note {
+  margin: 25px 0 0;
+  color: var(--lc-gold-light);
+  font-size: 0.82rem;
+  line-height: 1.8;
+  text-align: center;
 }
 
 /* Lookbook */
@@ -1042,6 +1170,15 @@
   .products-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .boutique-videos-section {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .boutique-videos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
@@ -1149,6 +1286,31 @@
 
   .fresh-drops-gallery {
     height: 300px;
+  }
+
+  .boutique-videos-section {
+    padding: 62px 5%;
+  }
+
+  .boutique-videos-heading {
+    margin-bottom: 27px;
+  }
+
+  .boutique-videos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .boutique-video-info {
+    padding: 13px 11px 15px;
+  }
+
+  .boutique-video-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .boutique-video-info p {
+    font-size: 0.74rem;
   }
 
   .lookbook-grid {
@@ -1268,6 +1430,14 @@
   .product-information h3 {
     font-size: 0.84rem;
   }
+
+  .boutique-videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .boutique-video-frame {
+    aspect-ratio: 9 / 14;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1280,4 +1450,3 @@
     transition-duration: 0.01ms !important;
   }
 }
-

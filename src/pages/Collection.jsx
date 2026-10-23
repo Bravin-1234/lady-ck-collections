@@ -2,60 +2,104 @@
 import React, { useMemo, useState } from "react";
 import "./Collection.css";
 
+// ==================== DRESSES ====================
 import dresses from "../assets/images/dresses.jpg";
 import dress1 from "../assets/images/dresses-01.jpg";
 import dress2 from "../assets/images/dresses-02.jpg";
 import dress3 from "../assets/images/dresses-03.jpg";
+import dress4 from "../assets/images/dresses-04.jpg";
+import dress5 from "../assets/images/dresses-05.jpg";
+import dress6 from "../assets/images/dresses-06.jpg";
+import dress7 from "../assets/images/dresses-07.jpg";
+import dress8 from "../assets/images/dresses-08.jpg";
+import dress9 from "../assets/images/dresses-09.jpg";
+import dress10 from "../assets/images/dresses-10.jpg";
+import dress11 from "../assets/images/dresses-11.jpg";
 
+// ==================== HEADBANDS ====================
+import headbands from "../assets/images/headbands.jpg";
+
+// ==================== JEANS ====================
 import jeans from "../assets/images/jeans.jpg";
 import jeans1 from "../assets/images/jeans-01.jpg";
 import jeans2 from "../assets/images/jeans-02.jpg";
 import jeans3 from "../assets/images/jeans-03.jpg";
 import jeans4 from "../assets/images/jeans-04.jpg";
 
+// ==================== CASUAL WEAR ====================
+import casualwear from "../assets/images/casualwear.jpg";
+import casualwear1 from "../assets/images/casualwear-01.jpg";
+import casualwear2 from "../assets/images/casualwear-02.jpg";
+import casualwear3 from "../assets/images/casualwear-03.jpg";
+
+// ==================== GYMWEAR ====================
 import gymwear from "../assets/images/gymwear.jpg";
 import gymwear1 from "../assets/images/gymwear-01.jpg";
 import gymwear2 from "../assets/images/gymwear-02.jpg";
+import gymwear3 from "../assets/images/gymwear-03.jpg";
 
+// ==================== SWEATPANTS ====================
 import sweatpants from "../assets/images/sweatpants.jpg";
 import sweatpants1 from "../assets/images/sweatpants-01.jpg";
 import sweatpants2 from "../assets/images/sweatpants-02.jpg";
 import sweatpants3 from "../assets/images/sweatpants-03.jpg";
 import sweatpants4 from "../assets/images/sweatpants-04.jpg";
 import sweatpants5 from "../assets/images/sweatpants-05.jpg";
+import sweatpants6 from "../assets/images/sweatpants-06.jpg";
+import sweatpants7 from "../assets/images/sweatpants-07.jpg";
+import sweatpants8 from "../assets/images/sweatpants-08.jpg";
+import sweatpants9 from "../assets/images/sweatpants-09.jpg";
+import sweatpants10 from "../assets/images/sweatpants-10.jpg";
+import sweatpants11 from "../assets/images/sweatpants-11.jpg";
 
-import handbag from "../assets/images/handbag.jpeg";
-import handbag1 from "../assets/images/handbag-01.jpeg";
-import handbag2 from "../assets/images/handbag-02.jpeg";
-import handbag3 from "../assets/images/handbag-03.jpeg";
-import handbag4 from "../assets/images/handbag-04.jpeg";
-import handbag5 from "../assets/images/handbag-05.jpeg";
-import handbag6 from "../assets/images/handbag-06.webp";
-import handbag7 from "../assets/images/handbag-07.jpg";
+// ==================== TRACKSUITS ====================
+import tracksuits from "../assets/images/tracksuits.jpg";
 
+// ==================== HANDBAGS ====================
+import handbag from "../assets/images/handbag.jpg";
+import handbag1 from "../assets/images/handbag-01.jpg";
+import handbag2 from "../assets/images/handbag-02.jpg";
+
+// ==================== SHOES ====================
 import shoes from "../assets/images/shoes.jpg";
 import shoes1 from "../assets/images/shoes-01.jpg";
 import shoes2 from "../assets/images/shoes-02.jpg";
 import shoes3 from "../assets/images/shoes-03.jpg";
 import shoes4 from "../assets/images/shoes-04.jpg";
+import shoes5 from "../assets/images/shoes-05.jpg";
+import shoes6 from "../assets/images/shoes-06.jpg";
+import shoes7 from "../assets/images/shoes-07.jpg";
 
+// ==================== BALLET SLIPPERS ====================
+import balletslippers from "../assets/images/balletslippers.jpg";
 
+// ==================== KIDS' WEAR ====================
+import kids from "../assets/images/kids-01.jpg";
+import kids1 from "../assets/images/kids-02.jpg";
+import kids2 from "../assets/images/kids-03.jpg";
+import kids3 from "../assets/images/kids-04.jpg";
+import kids4 from "../assets/images/kids-05.jpg";
+import kids5 from "../assets/images/kids-06.jpg";
+import kids6 from "../assets/images/kids-07.jpg";
 
-import kids from "../assets/images/kids.jpg";
-import kids1 from "../assets/images/kids-01.jpg";
-import kids2 from "../assets/images/kids-02.jpg";
-import kids3 from "../assets/images/kids-03.jpg";
-import kids4 from "../assets/images/kids-04.jpg";
-import kids5 from "../assets/images/kids-05.jpg";
-import kids6 from "../assets/images/kids-06.jpg";
+// ==================== INNERWEAR ====================
+import innerwear from "../assets/images/innerwears.jpg";
 
+// ==================== SWIMMING COSTUMES ====================
+import swimwear from "../assets/images/swimmingcostume.jpg";
+import swimwear1 from "../assets/images/swimmingcostume-01.jpg";
+import swimwear2 from "../assets/images/swimmingcostume-02.jpg";
 
-import innerwear from "../assets/images/innerwears.jpeg";
-import swimwear from "../assets/images/swimmingcostume.jpeg";
-import swimwear2 from "../assets/images/swimmingcostume.jpg";
+// ==================== BOUTIQUE VIDEOS ====================
+import video1 from "../assets/videos/vid-01.mp4";
+import video2 from "../assets/videos/vid-02.mp4";
+import video3 from "../assets/videos/vid-03.mp4";
+import video4 from "../assets/videos/vid-04.mp4";
+import video5 from "../assets/videos/vid-05.mp4";
 
 const WHATSAPP_NUMBER = "254758363148";
 
+// ==================== PRODUCT GENERATOR ====================
 const makeProducts = (category, images, prefix) =>
   images.map((image, index) => ({
     id: `${prefix}-${index + 1}`,
@@ -70,51 +114,133 @@ const makeProducts = (category, images, prefix) =>
     limitedStock: false,
   }));
 
+// ==================== CATEGORIES ====================
+const categories = [
+  { name: "All", icon: "✦" },
+  { name: "Dresses", icon: "♡" },
+  { name: "Headbands", icon: "✧" },
+  { name: "Jeans", icon: "◇" },
+  { name: "Casual Wear", icon: "✦" },
+  { name: "Gymwear", icon: "↗" },
+  { name: "Sweatpants", icon: "◈" },
+  { name: "Tracksuits", icon: "◇" },
+  { name: "Handbags", icon: "♧" },
+  { name: "Shoes", icon: "⌁" },
+  { name: "Ballet Slippers", icon: "♡" },
+  { name: "Kids' Wear", icon: "♧" },
+  { name: "Innerwears & Essentials", icon: "✿" },
+  { name: "Swimming Costumes", icon: "≈" },
+];
+
+// ==================== PRODUCTS ====================
 const products = [
-  ...makeProducts("Dresses", [dresses, dress1, dress2, dress3], "dress"),
   ...makeProducts(
-    "Jeans & Casual Wear",
+    "Dresses",
+    [
+      dresses,
+      dress1,
+      dress2,
+      dress3,
+      dress4,
+      dress5,
+      dress6,
+      dress7,
+      dress8,
+      dress9,
+      dress10,
+      dress11,
+    ],
+    "dresses"
+  ),
+
+  ...makeProducts("Headbands", [headbands], "headbands"),
+
+  ...makeProducts(
+    "Jeans",
     [jeans, jeans1, jeans2, jeans3, jeans4],
     "jeans"
   ),
-  ...makeProducts("Gymwear", [gymwear, gymwear1, gymwear2], "gymwear"),
+
+  ...makeProducts(
+    "Casual Wear",
+    [casualwear, casualwear1, casualwear2, casualwear3],
+    "casualwear"
+  ),
+
+  ...makeProducts(
+    "Gymwear",
+    [gymwear, gymwear1, gymwear2, gymwear3],
+    "gymwear"
+  ),
+
   ...makeProducts(
     "Sweatpants",
-    [sweatpants, sweatpants1, sweatpants2, sweatpants3, sweatpants4, sweatpants5],
+    [
+      sweatpants,
+      sweatpants1,
+      sweatpants2,
+      sweatpants3,
+      sweatpants4,
+      sweatpants5,
+      sweatpants6,
+      sweatpants7,
+      sweatpants8,
+      sweatpants9,
+      sweatpants10,
+      sweatpants11,
+    ],
     "sweatpants"
   ),
+
+  ...makeProducts("Tracksuits", [tracksuits], "tracksuits"),
+
   ...makeProducts(
     "Handbags",
-    [handbag, handbag1, handbag2, handbag3, handbag4, handbag5, handbag6, handbag7],
-    "handbag"
+    [handbag, handbag1, handbag2],
+    "handbags"
   ),
-  ...makeProducts("Shoes", [shoes, shoes1, shoes2, shoes3, shoes4], "shoes"),
+
+  ...makeProducts(
+    "Shoes",
+    [
+      shoes,
+      shoes1,
+      shoes2,
+      shoes3,
+      shoes4,
+      shoes5,
+      shoes6,
+      shoes7,
+    ],
+    "shoes"
+  ),
+
+  ...makeProducts(
+    "Ballet Slippers",
+    [balletslippers],
+    "ballet-slippers"
+  ),
+
   ...makeProducts(
     "Kids' Wear",
     [kids, kids1, kids2, kids3, kids4, kids5, kids6],
     "kids"
   ),
-  ...makeProducts("Ladies' Innerwear", [innerwear], "innerwear"),
+
+  ...makeProducts(
+    "Innerwears & Essentials",
+    [innerwear],
+    "innerwear"
+  ),
+
   ...makeProducts(
     "Swimming Costumes",
-    [swimwear, swimwear2],
+    [swimwear, swimwear1, swimwear2],
     "swimwear"
   ),
 ];
 
-const categories = [
-  { name: "All", icon: "✦" },
-  { name: "Dresses", icon: "♡" },
-  { name: "Jeans & Casual Wear", icon: "✧" },
-  { name: "Gymwear", icon: "↗" },
-  { name: "Sweatpants", icon: "◈" },
-  { name: "Handbags", icon: "◇" },
-  { name: "Shoes", icon: "⌁" },
-  { name: "Kids' Wear", icon: "♡" },
-  { name: "Ladies' Innerwear", icon: "✿" },
-  { name: "Swimming Costumes", icon: "≈" },
-];
-
+// ==================== SHOP THE VIBE ====================
 const vibes = [
   {
     name: "Soft Girl Era",
@@ -126,8 +252,8 @@ const vibes = [
   {
     name: "Street Swag",
     description: "Casual drip for everyday moves 😎",
-    category: "Jeans & Casual Wear",
-    image: jeans1,
+    category: "Casual Wear",
+    image: casualwear1,
     className: "street-swag",
   },
   {
@@ -153,19 +279,20 @@ const vibes = [
   },
 ];
 
+// ==================== STYLE INSPIRATION ====================
 const lookbook = [
   {
     title: "Campus Drip",
-    description: "Casual looks for your everyday plans.",
-    category: "Jeans & Casual Wear",
+    description: "Jeans for your everyday plans.",
+    category: "Jeans",
     image: jeans2,
     tag: "EVERYDAY STYLE",
   },
   {
     title: "Weekend Link-up",
-    description: "Bring your own vibe to the weekend.",
-    category: "Sweatpants",
-    image: sweatpants1,
+    description: "Comfortable tracksuits for your weekend moves.",
+    category: "Tracksuits",
+    image: tracksuits,
     tag: "CASUAL VIBES",
   },
   {
@@ -179,11 +306,46 @@ const lookbook = [
     title: "Complete the Fit",
     description: "Find accessories to finish your look.",
     category: "Handbags",
-    image: handbag7,
+    image: handbag2,
     tag: "THE FINISHING TOUCH",
   },
 ];
 
+// ==================== VIDEO SHOWCASE ====================
+const collectionVideos = [
+  {
+    id: "video-01",
+    title: "The Boutique Vibe",
+    description: "Get a closer look at Lady CK Collections.",
+    src: video1,
+  },
+  {
+    id: "video-02",
+    title: "Style Inspiration",
+    description: "Your next look might be right here.",
+    src: video2,
+  },
+  {
+    id: "video-03",
+    title: "Fresh Fashion",
+    description: "Explore the looks and find your own vibe.",
+    src: video3,
+  },
+  {
+    id: "video-04",
+    title: "Find Your Drip",
+    description: "Different looks, different moods. Choose yours.",
+    src: video4,
+  },
+  {
+    id: "video-05",
+    title: "More from Lady CK",
+    description: "Stay stylish and keep the drip alive.",
+    src: video5,
+  },
+];
+
+// ==================== SOCIAL ACCOUNTS ====================
 const socialAccounts = [
   {
     name: "TikTok",
@@ -211,10 +373,14 @@ const socialAccounts = [
   },
 ];
 
+// ==================== WHATSAPP HELPER ====================
 function makeWhatsAppLink(message) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
 }
 
+// ==================== SECTION HEADING ====================
 function SectionHeading({ eyebrow, title, description }) {
   return (
     <div className="collection-heading">
@@ -225,6 +391,7 @@ function SectionHeading({ eyebrow, title, description }) {
   );
 }
 
+// ==================== PRODUCT CARD ====================
 function ProductCard({ product }) {
   return (
     <article className="product-card">
@@ -239,17 +406,23 @@ function ProductCard({ product }) {
         {product.isNew && (
           <span className="product-badge">New Drop</span>
         )}
+
         {product.isBestseller && (
-          <span className="product-badge bestseller-badge">Bestseller</span>
+          <span className="product-badge bestseller-badge">
+            Bestseller
+          </span>
         )}
+
         {product.limitedStock && (
-          <span className="product-badge limited-badge">Limited Stock</span>
+          <span className="product-badge limited-badge">
+            Limited Stock
+          </span>
         )}
 
         <a
           className="product-quick-order"
           href={makeWhatsAppLink(
-            `Hi Lady CK Collections! I'm interested in ${product.name}. Please share its price, available sizes and colours.`
+            `Hi Lady CK Collections! I'm interested in ${product.name} from the ${product.category} category. Please share its price, available sizes and colours.`
           )}
           target="_blank"
           rel="noreferrer"
@@ -274,7 +447,7 @@ function ProductCard({ product }) {
         <a
           className="product-order-link"
           href={makeWhatsAppLink(
-            `Hi Lady CK Collections! I'd like to enquire about ${product.name}. Kindly share the price, available sizes and colours.`
+            `Hi Lady CK Collections! Nataka hii 🔥: ${product.name} (${product.category}). Kindly share the price, available sizes and colours.`
           )}
           target="_blank"
           rel="noreferrer"
@@ -286,6 +459,35 @@ function ProductCard({ product }) {
   );
 }
 
+// ==================== VIDEO CARD ====================
+function VideoCard({ video }) {
+  return (
+    <article className="collection-video-card">
+      <div className="collection-video-frame">
+        <video
+          className="collection-video"
+          controls
+          preload="metadata"
+          playsInline
+          aria-label={video.title}
+        >
+          <source src={video.src} type="video/mp4" />
+          Your browser does not support embedded videos.
+        </video>
+      </div>
+
+      <div className="collection-video-copy">
+        <span className="collection-video-label">
+          LADY CK COLLECTIONS
+        </span>
+        <h3>{video.title}</h3>
+        <p>{video.description}</p>
+      </div>
+    </article>
+  );
+}
+
+// ==================== MAIN COLLECTION PAGE ====================
 export default function Collection() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
@@ -294,17 +496,22 @@ export default function Collection() {
   const filteredProducts = useMemo(() => {
     let result = products.filter((product) => {
       const matchesCategory =
-        activeCategory === "All" || product.category === activeCategory;
+        activeCategory === "All" ||
+        product.category === activeCategory;
+
+      const term = searchTerm.trim().toLowerCase();
 
       const matchesSearch =
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.category.toLowerCase().includes(searchTerm.toLowerCase());
+        product.name.toLowerCase().includes(term) ||
+        product.category.toLowerCase().includes(term);
 
       return matchesCategory && matchesSearch;
     });
 
     if (sortOrder === "name") {
-      result = [...result].sort((a, b) => a.name.localeCompare(b.name));
+      result = [...result].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
     }
 
     return result;
@@ -320,11 +527,19 @@ export default function Collection() {
     });
   }
 
+  function clearFilters() {
+    setActiveCategory("All");
+    setSearchTerm("");
+  }
+
   return (
     <main className="collection-page">
-      {/* HERO */}
+      {/* ==================== HERO ==================== */}
       <section className="collection-hero">
-        <div className="collection-hero-glow" aria-hidden="true" />
+        <div
+          className="collection-hero-glow"
+          aria-hidden="true"
+        />
 
         <div className="collection-hero-content">
           <span className="hero-mini-label">
@@ -350,11 +565,18 @@ export default function Collection() {
             <a
               className="gold-button"
               href="#all-products"
-              onClick={() => setActiveCategory("All")}
+              onClick={() => {
+                setActiveCategory("All");
+                setSearchTerm("");
+              }}
             >
               Explore Collection <span>↘</span>
             </a>
-            <a className="outline-button" href="#shop-the-vibe">
+
+            <a
+              className="outline-button"
+              href="#shop-the-vibe"
+            >
               Find Your Vibe
             </a>
           </div>
@@ -364,16 +586,24 @@ export default function Collection() {
           </div>
         </div>
 
-        <div className="collection-hero-decoration" aria-hidden="true">
+        <div
+          className="collection-hero-decoration"
+          aria-hidden="true"
+        >
           <span className="decoration-ring ring-one" />
           <span className="decoration-ring ring-two" />
           <span className="decoration-star">✦</span>
-          <span className="decoration-caption">STYLE IS A STATEMENT</span>
+          <span className="decoration-caption">
+            STYLE IS A STATEMENT
+          </span>
         </div>
       </section>
 
-      {/* QUICK CATEGORY LINKS */}
-      <nav className="collection-jump-links" aria-label="Shop categories">
+      {/* ==================== QUICK CATEGORY LINKS ==================== */}
+      <nav
+        className="collection-jump-links"
+        aria-label="Shop categories"
+      >
         {categories.slice(1).map((category) => (
           <button
             key={category.name}
@@ -385,7 +615,7 @@ export default function Collection() {
         ))}
       </nav>
 
-      {/* SHOP THE VIBE */}
+      {/* ==================== SHOP THE VIBE ==================== */}
       <section className="vibe-section" id="shop-the-vibe">
         <SectionHeading
           eyebrow="FIND YOUR ENERGY"
@@ -403,33 +633,44 @@ export default function Collection() {
               aria-label={`Explore ${vibe.name}`}
             >
               <img src={vibe.image} alt="" loading="lazy" />
+
               <span className="vibe-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
+
               <span className="vibe-overlay">
-                <span className="vibe-description">{vibe.description}</span>
+                <span className="vibe-description">
+                  {vibe.description}
+                </span>
                 <span className="vibe-title">{vibe.name}</span>
-                <span className="vibe-explore">Explore the look ↗</span>
+                <span className="vibe-explore">
+                  Explore the look ↗
+                </span>
               </span>
             </button>
           ))}
         </div>
       </section>
 
-      {/* FRESH DROPS */}
+      {/* ==================== FRESH DROPS ==================== */}
       <section className="fresh-drops-section">
         <div className="fresh-drops-copy">
-          <span className="collection-eyebrow">YOUR NEXT FAVOURITE LOOK</span>
+          <span className="collection-eyebrow">
+            YOUR NEXT FAVOURITE LOOK
+          </span>
+
           <h2>
             The Latest <span>Drip</span> ✨
           </h2>
+
           <p>
             Fresh stock imeingia? This is where the newest arrivals belong.
-            Update this selection whenever the boutique receives new pieces.
           </p>
+
           <p className="sheng-note">
             Usibaki kwa seen 😂 — come see what catches your eye.
           </p>
+
           <button
             type="button"
             className="gold-button"
@@ -440,14 +681,21 @@ export default function Collection() {
         </div>
 
         <div className="fresh-drops-gallery">
-          <img src={dress2} alt="Dress collection" loading="lazy" />
+          <img src={dress8} alt="Dress collection" loading="lazy" />
           <img src={handbag2} alt="Handbag collection" loading="lazy" />
-          <img src={jeans3} alt="Jeans collection" loading="lazy" />
+          <img
+            src={casualwear2}
+            alt="Casual wear collection"
+            loading="lazy"
+          />
         </div>
       </section>
 
-      {/* STYLE INSPIRATION */}
-      <section className="lookbook-section" id="style-inspiration">
+      {/* ==================== STYLE INSPIRATION ==================== */}
+      <section
+        className="lookbook-section"
+        id="style-inspiration"
+      >
         <SectionHeading
           eyebrow="GET INSPIRED"
           title="Style Inspiration"
@@ -464,11 +712,14 @@ export default function Collection() {
             >
               <div className="lookbook-image-wrap">
                 <img src={look.image} alt="" loading="lazy" />
+
                 <span className="lookbook-index">
                   LOOK {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <span className="lookbook-arrow">↗</span>
               </div>
+
               <div className="lookbook-copy">
                 <span>{look.tag}</span>
                 <h3>{look.title}</h3>
@@ -477,30 +728,70 @@ export default function Collection() {
             </button>
           ))}
         </div>
+
         <p className="lookbook-disclaimer">
-          Outfit ideas are for inspiration. Product availability is confirmed
-          by the boutique.
+          Outfit ideas are for inspiration. Product availability is
+          confirmed by the boutique.
         </p>
       </section>
 
-      {/* ALL PRODUCTS + SEARCH + FILTERS */}
-      <section className="all-products-section" id="all-products">
+      {/* ==================== VIDEO SHOWCASE ==================== */}
+      <section
+        className="collection-videos-section"
+        id="collection-videos"
+      >
+        <SectionHeading
+          eyebrow="WATCH THE VIBE"
+          title="Behind the Drip 🎬"
+          description="See more of Lady CK Collections. Press play, catch the vibe, and find your next favourite look."
+        />
+
+        <div className="collection-videos-grid">
+          {collectionVideos.map((video) => (
+            <VideoCard key={video.id} video={video} />
+          ))}
+        </div>
+
+        <p className="collection-videos-note">
+          Love a look? Usiiache iende 😂 — come enquire directly and
+          we'll help you check availability.
+        </p>
+
+        <a
+          className="gold-button collection-videos-cta"
+          href={makeWhatsAppLink(
+            "Hi Lady CK Collections! I've watched your videos and would like to enquire about the items in your collection."
+          )}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ask About a Look <span>↗</span>
+        </a>
+      </section>
+
+      {/* ==================== PRODUCTS, SEARCH AND FILTERS ==================== */}
+      <section
+        className="all-products-section"
+        id="all-products"
+      >
         <SectionHeading
           eyebrow="EXPLORE YOUR OPTIONS"
           title="Find Your Look"
-          description="Browse the collection and ask us about your favourites."
+          description="Browse each category separately and ask us about your favourites."
         />
 
         <div className="product-toolbar">
           <label className="collection-search">
             <span aria-hidden="true">⌕</span>
+
             <input
               type="search"
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
-              placeholder="Search dresses, jeans, handbags..."
+              placeholder="Search dresses, jeans, casual wear, handbags..."
               aria-label="Search collection"
             />
+
             {searchTerm && (
               <button
                 type="button"
@@ -514,6 +805,7 @@ export default function Collection() {
 
           <label className="sort-control">
             <span>Sort:</span>
+
             <select
               value={sortOrder}
               onChange={(event) => setSortOrder(event.target.value)}
@@ -525,13 +817,18 @@ export default function Collection() {
           </label>
         </div>
 
-        <div className="category-filter-list" aria-label="Filter by category">
+        <div
+          className="category-filter-list"
+          aria-label="Filter by category"
+        >
           {categories.map((category) => (
             <button
               key={category.name}
               type="button"
               className={
-                activeCategory === category.name ? "active-filter" : ""
+                activeCategory === category.name
+                  ? "active-filter"
+                  : ""
               }
               onClick={() => setActiveCategory(category.name)}
               aria-pressed={activeCategory === category.name}
@@ -545,15 +842,13 @@ export default function Collection() {
           <p>
             Showing <strong>{filteredProducts.length}</strong>{" "}
             {filteredProducts.length === 1 ? "item" : "items"}
+            {activeCategory !== "All" && (
+              <> in <strong>{activeCategory}</strong></>
+            )}
           </p>
+
           {(activeCategory !== "All" || searchTerm) && (
-            <button
-              type="button"
-              onClick={() => {
-                setActiveCategory("All");
-                setSearchTerm("");
-              }}
-            >
+            <button type="button" onClick={clearFilters}>
               Clear filters ×
             </button>
           )}
@@ -562,23 +857,26 @@ export default function Collection() {
         {filteredProducts.length > 0 ? (
           <div className="products-grid">
             {filteredProducts.map((product) => (
-              <ProductCard product={product} key={product.id} />
+              <ProductCard
+                product={product}
+                key={product.id}
+              />
             ))}
           </div>
         ) : (
           <div className="empty-search-state">
             <span className="empty-search-icon">⌕</span>
             <h3>Aki, hatujapata hiyo look 😅</h3>
+
             <p>
-              Try another search or category. Maybe your next favourite iko huko!
+              Try another search or category. Maybe your next favourite
+              iko huko!
             </p>
+
             <button
               type="button"
               className="gold-button"
-              onClick={() => {
-                setActiveCategory("All");
-                setSearchTerm("");
-              }}
+              onClick={clearFilters}
             >
               Show All Products
             </button>
@@ -586,20 +884,33 @@ export default function Collection() {
         )}
       </section>
 
-      {/* SOCIAL MEDIA */}
-      <section className="social-showcase-section" id="social-showcase">
+      {/* ==================== SOCIAL MEDIA ==================== */}
+      <section
+        className="social-showcase-section"
+        id="social-showcase"
+      >
         <div className="social-showcase-heading">
           <div>
-            <span className="collection-eyebrow">MORE FASHION. MORE VIBES.</span>
+            <span className="collection-eyebrow">
+              MORE FASHION. MORE VIBES.
+            </span>
+
             <h2>
               Keep the Drip <span>Alive</span> 🖤
             </h2>
+
             <p>
-              For more click izo buttons zetu za social handles. Kam ucheki stock fty fty🔥
+              For more click izo buttons zetu za social handles.
+              Kam ucheki stock fty fty🔥
             </p>
           </div>
+
           <p className="social-follow-note">
-            Follow Lady CK for outfit inspo, new looks and more vibes.
+            Follow Lady CK for outfit inspo, new looks and more vibes. 
+
+
+
+
           </p>
         </div>
 
@@ -615,32 +926,43 @@ export default function Collection() {
               <span className="social-icon" aria-hidden="true">
                 {account.icon}
               </span>
+
               <span className="social-card-content">
                 <strong>{account.name}</strong>
-                <span className="social-handle">{account.handle}</span>
+                <span className="social-handle">
+                  {account.handle}
+                </span>
                 <span className="social-description">
                   {account.description}
                 </span>
-                <span className="social-open-link">Explore more ↗</span>
+                <span className="social-open-link">
+                  Explore more ↗
+                </span>
               </span>
             </a>
           ))}
         </div>
       </section>
 
-      {/* WHATSAPP SHOPPING CTA */}
+      {/* ==================== WHATSAPP SHOPPING CTA ==================== */}
       <section className="collection-contact-section">
         <div className="contact-star" aria-hidden="true">
           ✦
         </div>
-        <span className="collection-eyebrow">YOUR NEXT LOOK STARTS HERE</span>
+
+        <span className="collection-eyebrow">
+          YOUR NEXT LOOK STARTS HERE
+        </span>
+
         <h2>
           Seen Something <span>You Love?</span>
         </h2>
+
         <p>
           Have a question about the price, size, colour or availability?
           Talk to Lady CK Collections directly.
         </p>
+
         <a
           href={makeWhatsAppLink(
             "Hi Lady CK Collections! I'd like to enquire about your collection. Please help me find a look."
@@ -651,6 +973,7 @@ export default function Collection() {
         >
           Enquire on WhatsApp <span>↗</span>
         </a>
+
         <p className="contact-sheng">
           Your style, your choice — usibaki nyuma 😎
         </p>

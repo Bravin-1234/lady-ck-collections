@@ -4,8 +4,12 @@ import "./About.css";
 import logo from "../assets/images/logo.jpg";
 import shoesImage from "../assets/images/shoes-02.jpg";
 import kidsImage from "../assets/images/kids-01.jpg";
-import innerwearImage from "../assets/images/innerwears.jpeg";
-import handbagImage from "../assets/images/handbag-07.jpg";
+import innerwearImage from "../assets/images/innerwears.jpg";
+import handbagImage from "../assets/images/handbag-01.jpg";
+import dressImage from "../assets/images/dresses-01.jpg";
+import jeansImage from "../assets/images/jeans-01.jpg";
+import gymwearImage from "../assets/images/gymwear-03.jpg";
+import swimmingcostumeImage from "../assets/images/swimmingcostume-01.jpg";
 
 const categories = [
   {
@@ -13,21 +17,21 @@ const categories = [
     description:
       "Elegant dresses for everyday wear, celebrations and special occasions.",
     image:
-      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85",
+      dressImage,
   },
   {
     title: "Jeans & Casual Wear",
     description:
       "Comfortable jeans and casual outfits for everyday style.",
     image:
-      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=85",
+      jeansImage,
   },
   {
     title: "Gymwear & Sweatpants",
     description:
       "Comfortable activewear for workouts and relaxed lifestyles.",
     image:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=85",
+      gymwearImage,
   },
   {
     title: "Handbags",
@@ -49,9 +53,9 @@ const categories = [
     image: kidsImage,
   },
   {
-    title: "Ladies' Innerwear & Essentials",
+    title: "Innerwear & Essentials",
     description:
-      "Everyday ladies' essentials designed for comfort and confidence.",
+      "Innerwears designed for comfort and confidence.",
     image: innerwearImage,
   },
   {
@@ -59,7 +63,7 @@ const categories = [
     description:
       "Swimwear for ladies and kids, holidays and leisure.",
     image:
-      "https://images.unsplash.com/photo-1570976447640-ac859083963f?auto=format&fit=crop&w=800&q=85",
+      swimmingcostumeImage,
   },
 ];
 
